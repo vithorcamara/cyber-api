@@ -89,7 +89,7 @@ def verificar_mfa():
     token = jwt.encode({'usuario': usuario, 'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=TOKEN_EXPIRATION)}, SECRET_KEY, algorithm='HS512')
     
     resposta = make_response(jsonify({'mensagem': 'MFA verificado com sucesso!'}))
-    resposta.set_cookie('token', token, httponly=True, secure=False, samesite='Lax')
+    resposta.set_cookie('token', token, httponly=True, secure=True, samesite='None')
     
     return resposta
 
