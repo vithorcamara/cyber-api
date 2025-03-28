@@ -1,0 +1,16 @@
+datetime
+dotenv
+email
+firebase_admin
+flask
+functools
+flask_cors
+gunicorn
+hashlib
+json
+jwt
+os
+pyotp
+secrets
+smtplib
+pyotp
